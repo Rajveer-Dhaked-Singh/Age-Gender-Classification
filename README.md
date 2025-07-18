@@ -10,13 +10,13 @@ This project builds a deep learning model using TensorFlow and Keras to predict 
 ```
 
 Gender and Age Classification/
-├── UTKFace/                 # Dataset folder (downloaded separately)
+├── UTKFace/                 # Dataset folder 
 ├── preprocess.py            # Preprocessing and data loader
-├── model.py                 # CNN model definition
-├── train.py                 # Training script
-├── predict.py               # Real-time webcam predictions
-├── requirements.txt         # Python dependencies
-└── README.md                # Project description (this file)
+├── model_train.py                 # CNN model training
+├── output_test_file.py                 # Trained model outcomes
+├── test_model.py               # Real-time webcam predictions
+├── model_output_keras.keras         # Project model
+└── README.md                # Project description 
 
 ````
 
@@ -26,16 +26,15 @@ Gender and Age Classification/
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/age-gender-race-predictor.git
-cd age-gender-race-predictor
+git clone https://github.com/Rajveer-Dhaked-Singh/Age-Gender-Classification.git
+cd Age_Gender_Classification
 
-# Create virtual environment (optional)
+# Create virtual environment 
 python -m venv venv
-venv\Scripts\activate  # On Windows
+venv\Scripts\activate  
 
-# Install requirements
-pip install -r requirements.txt
-````
+# Install libraries
+*numpy pandas tensorflow scikit-learn cv2 
 
 Make sure:
 
@@ -59,14 +58,14 @@ Make sure:
 ## 🚀 Training
 
 ```bash
-python train.py
+python Model_Train.py
 ```
 
 This:
 
 * Loads UTKFace dataset
 * Trains a multi-output CNN
-* Saves model to `age_model.keras`
+* Saves model to `model_output_keras.keras`
 
 Metrics displayed:
 
@@ -79,7 +78,7 @@ Metrics displayed:
 ## 🎥 Webcam Prediction
 
 ```bash
-python predict.py
+python test_model.py
 ```
 
 This opens your webcam and:
